@@ -15,7 +15,16 @@
             <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autocomplete="username" />
             <x-input-error :messages="$errors->get('email')" class="mt-2" />
         </div>
-
+        <!-- Rôle -->
+         <div class="mt-4">
+    <x-input-label for="role" :value="__('Rôle')" />
+    <select id="role" name="role" class="block mt-1 w-full border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm" required>
+        <option value="">-- Sélectionne un rôle --</option>
+        <option value="client">Client</option>
+        <option value="manager">Gérant de salon</option>
+    </select>
+    <x-input-error :messages="$errors->get('role')" class="mt-2" />
+</div>
         <!-- Password -->
         <div class="mt-4">
             <x-input-label for="password" :value="__('Password')" />
